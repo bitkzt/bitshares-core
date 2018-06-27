@@ -1,0 +1,17 @@
+[Unit]
+Description=KZDEX Witness Node
+After=network.target
+Documentation=https://wallet.kzdex.org
+
+[Service]
+ExecStart=/root/kzdex-core/programs/witness_node/witness_node --enable-stale-production
+WorkingDirectory=/root/kzdex-core
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=witness_node
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

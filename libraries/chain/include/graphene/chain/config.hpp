@@ -23,8 +23,8 @@
  */
 #pragma once
 
-#define GRAPHENE_SYMBOL "BTS"
-#define GRAPHENE_ADDRESS_PREFIX "BTS"
+#define GRAPHENE_SYMBOL "KZT"
+#define GRAPHENE_ADDRESS_PREFIX "KZT"
 
 #define GRAPHENE_MIN_ACCOUNT_NAME_LENGTH 1
 #define GRAPHENE_MAX_ACCOUNT_NAME_LENGTH 63
@@ -144,7 +144,11 @@
 #define GRAPHENE_RECENTLY_MISSED_COUNT_INCREMENT             4
 #define GRAPHENE_RECENTLY_MISSED_COUNT_DECREMENT             3
 
-#define GRAPHENE_CURRENT_DB_VERSION                          "BTS2.13"
+<<<<<<< HEAD
+#define GRAPHENE_CURRENT_DB_VERSION                          "KZT2.13"
+=======
+#define GRAPHENE_CURRENT_DB_VERSION                          "BTS2.15"
+>>>>>>> upstream/master
 
 #define GRAPHENE_IRREVERSIBLE_THRESHOLD                      (70 * GRAPHENE_1_PERCENT)
 

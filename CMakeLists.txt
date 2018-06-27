@@ -1,11 +1,11 @@
-# Defines BitShares library target.
-project( BitShares )
+# Defines KZDEX library target.
+project( KZDEX )
 cmake_minimum_required( VERSION 2.8.12 )
 
-set( BLOCKCHAIN_NAME "BitShares" )
+set( BLOCKCHAIN_NAME "KZDEX" )
 
 set( CLI_CLIENT_EXECUTABLE_NAME graphene_client )
-set( GUI_CLIENT_EXECUTABLE_NAME BitShares )
+set( GUI_CLIENT_EXECUTABLE_NAME KZDEX )
 set( CUSTOM_URL_SCHEME "gcs" )
 set( INSTALLER_APP_ID "68ad7005-8eee-49c9-95ce-9eed97e5b347" )
 
@@ -71,7 +71,7 @@ ENDIF()
 
 if( WIN32 )
 
-    message( STATUS "Configuring BitShares on WIN32")
+    message( STATUS "Configuring KZDEX on WIN32")
     set( DB_VERSION 60 )
     set( BDB_STATIC_LIBS 1 )
 

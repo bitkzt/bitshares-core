@@ -89,11 +89,11 @@ int main( int argc, char** argv )
          return 1;
       }
 
-      if( !options.count( "genesis-json" ) )
-      {
-         std::cerr << "--genesis-json option is required\n";
-         return 1;
-      }
+      // if( !options.count( "genesis-json" ) )
+      // {
+      //    std::cerr << "--genesis-json option is required\n";
+      //    return 1;
+      // }
 
       if( !options.count( "out" ) )
       {

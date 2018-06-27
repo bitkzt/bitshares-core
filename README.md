@@ -3,9 +3,9 @@ BitShares Core
 
 [Build Status](https://travis-ci.org/bitshares/bitshares-core/branches):
 
-`master` | `develop` | `hardfork` | `testnet` | `bitshares-fc` 
+`master` | `develop` | `hardfork` | `testnet` | `bitshares-fc`
  --- | --- | --- | --- | ---
- [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=master)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=develop)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=hardfork)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=testnet)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-fc.svg?branch=master)](https://travis-ci.org/bitshares/bitshares-fc) 
+ [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=master)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=develop)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=hardfork)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-core.svg?branch=testnet)](https://travis-ci.org/bitshares/bitshares-core) | [![](https://travis-ci.org/bitshares/bitshares-fc.svg?branch=master)](https://travis-ci.org/bitshares/bitshares-fc)
 
 
 * [Getting Started](#getting-started)
@@ -51,6 +51,11 @@ To build after all dependencies are installed:
 
 **NOTE:** BitShares requires an [OpenSSL](https://www.openssl.org/) version in the 1.0.x series. OpenSSL 1.1.0 and newer are NOT supported. If your system OpenSSL version is newer, then you will need to manually provide an older version of OpenSSL and specify it to CMake using `-DOPENSSL_INCLUDE_DIR`, `-DOPENSSL_SSL_LIBRARY`, and `-DOPENSSL_CRYPTO_LIBRARY`.
 
+    cmake -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl@1.0/include \
+      -DOPENSSL_SSL_LIBRARY=/usr/local/opt/openssl@1.0/lib/libssl.a \
+      -DOPENSSL_CRYPTO_LIBRARY=/usr/local/opt/openssl@1.0/lib/libcrypto.a \
+      -DBOOST_ROOT=/usr/local/opt/boost@1.60 -DCMAKE_BUILD_TYPE=Debug .
+
 **NOTE:** BitShares requires a [Boost](http://www.boost.org/) version in the range [1.57, 1.63]. Versions earlier than
 1.57 or newer than 1.63 are NOT supported. If your system Boost version is newer, then you will need to manually build
 an older version of Boost and specify it to CMake using `DBOOST_ROOT`.
@@ -71,6 +76,7 @@ In order to run a full node with all the account history you need to remove `par
 After starting the witness node again, in a separate terminal you can run:
 
     ./programs/cli_wallet/cli_wallet
+
 
 Set your inital password:
 
@@ -237,7 +243,7 @@ FAQ
     less fine if your `witness_node` allows the general public to control which p2p nodes it's
     connecting to.  Therefore the API to add p2p connections needs to be set up with proper access
     controls.
- 
+
 License
 -------
 BitShares Core is under the MIT license. See [LICENSE](https://github.com/bitshares/bitshares-core/blob/master/LICENSE.txt)
